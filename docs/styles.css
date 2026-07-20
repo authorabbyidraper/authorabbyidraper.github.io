@@ -220,22 +220,24 @@ main {
 
 .about__content {
   display: grid;
-  grid-template-columns: minmax(220px, 280px) 1fr;
-  gap: 2rem;
+  grid-template-columns: minmax(180px, 240px) 1fr;
+  gap: 1.5rem;
   align-items: center;
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 1.25rem;
-  padding: 2rem;
+  padding: 1.5rem;
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.24);
 }
 
 .about__photo {
   width: 100%;
+  max-width: 220px;
   aspect-ratio: 1 / 1.15;
   object-fit: cover;
   object-position: center;
   border-radius: 1rem;
+  justify-self: center;
 }
 
 .about__text p {
@@ -288,6 +290,10 @@ main {
   .about__content {
     grid-template-columns: 1fr;
     padding: 1.25rem;
+  }
+
+  .about__photo {
+    max-width: 180px;
   }
 
   .showcase__text .button {
