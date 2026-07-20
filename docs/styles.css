@@ -83,7 +83,8 @@ img {
 }
 
 .contact .section-title,
-.intro .section-title {
+.intro .section-title,
+.about .section-title {
   color: var(--accent);
   text-transform: uppercase;
   letter-spacing: 0.3em;
@@ -212,6 +213,36 @@ main {
   font-size: 1.6rem;
 }
 
+.about {
+  max-width: 1120px;
+  margin: 0 auto 3rem;
+}
+
+.about__content {
+  display: grid;
+  grid-template-columns: minmax(220px, 280px) 1fr;
+  gap: 2rem;
+  align-items: center;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 1.25rem;
+  padding: 2rem;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.24);
+}
+
+.about__photo {
+  width: 100%;
+  aspect-ratio: 1 / 1.15;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 1rem;
+}
+
+.about__text p {
+  margin: 0;
+  font-size: 1.02rem;
+}
+
 .contact {
   max-width: 1120px;
   margin: 0 auto;
@@ -252,6 +283,11 @@ main {
 
   .showcase__item img {
     max-height: 320px;
+  }
+
+  .about__content {
+    grid-template-columns: 1fr;
+    padding: 1.25rem;
   }
 
   .showcase__text .button {
