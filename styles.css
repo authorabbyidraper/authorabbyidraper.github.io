@@ -1,0 +1,252 @@
+:root {
+  color-scheme: dark;
+  --bg: #0f0d0e;
+  --text: #f3efeb;
+  --muted: #b7b0ad;
+  --accent: #b61f2a;
+  --accent-dark: #7d1016;
+  --card: #191617;
+  --border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  color: var(--text);
+  background: linear-gradient(180deg, #171314 0%, var(--bg) 100%);
+  line-height: 1.6;
+}
+
+a {
+  color: #c7b7b4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.showcase__item img {
+  aspect-ratio: 2 / 4.2;
+  object-fit: cover;
+  object-position: center;
+  max-height: 660px;
+  width: 100%;
+  background: #ebe2d6;
+}
+
+.hero {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("https://images.unsplash.com/photo-1419640303358-44f0d27f48e7?auto=format&fit=crop&w=900&q=80");
+  background-size: cover;
+  background-position: center 30%;
+  color: #fff;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(20, 8, 10, 0.72), rgba(90, 15, 20, 0.3));
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.contact .section-title,
+.intro .section-title {
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  font-family: "Inter", sans-serif;
+}
+
+.hero .eyebrow {
+  color: #f3d0d0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", serif;
+  line-height: 1.15;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 5vw, 4.1rem);
+  margin: 0 0 1rem;
+}
+
+.hero__copy {
+  font-size: 1.1rem;
+  margin-bottom: 1.75rem;
+  max-width: 620px;
+  margin-inline: auto;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.9rem 1.4rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+}
+
+.button:hover {
+  background: var(--accent-dark);
+  text-decoration: none;
+}
+
+main {
+  padding: 4rem 1.5rem 5rem;
+}
+
+.section-heading {
+  max-width: 720px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.intro {
+  margin-bottom: 3rem;
+}
+
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.book-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(31, 36, 48, 0.05);
+}
+
+.book-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.35rem;
+}
+
+.showcase {
+  max-width: 1120px;
+  margin: 0 auto 3rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.showcase__item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.24);
+}
+
+.showcase__item--reverse {
+  grid-template-columns: 1fr 1fr;
+}
+
+.showcase__item--reverse .showcase__text {
+  order: 1;
+}
+
+.showcase__item--reverse img {
+  order: 2;
+}
+
+.showcase__text {
+  padding: 2.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.showcase__text h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.6rem;
+}
+
+.contact {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.contact__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+
+.contact__info p {
+  margin: 0 0 1rem;
+}
+
+@media (max-width: 760px) {
+  .book-list,
+  .showcase__item,
+  .showcase__item--reverse,
+  .contact__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .showcase__item--reverse img {
+    order: 0;
+  }
+
+  .showcase__text,
+  .contact__grid {
+    padding: 1.25rem;
+  }
+
+  .showcase__item img {
+    max-height: 320px;
+  }
+}
