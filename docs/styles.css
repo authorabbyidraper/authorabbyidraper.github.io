@@ -38,10 +38,10 @@ img {
 }
 
 .showcase__item img {
-  aspect-ratio: 2 / 4.2;
+  aspect-ratio: 2 / 4.4;
   object-fit: cover;
   object-position: center;
-  max-height: 660px;
+  max-height: 720px;
   width: 100%;
   background: #ebe2d6;
 }
