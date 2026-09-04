@@ -3,7 +3,7 @@
   --bg: #0f0d0e;
   --text: #f3efeb;
   --muted: #b7b0ad;
-  --accent: #FB0000;
+  --accent: ##E5402F;
   --accent-dark: #7d1016;
   --card: #191617;
   --border: rgba(255, 255, 255, 0.1);
@@ -95,7 +95,7 @@ img {
 }
 
 .hero .eyebrow {
-  color: #FB0000;
+  color: #E5402F;
 }
 
 h1,
